@@ -68,6 +68,31 @@
     <script type="text/javascript" src="js/dbhelper.js"></script>
     <!-- Main javascript file -->
     <script type="text/javascript" src="js/restaurant_info.js"></script>
+    <!-- In mobile view, change map top spacing (margin) based on heading height -->
+    <script type="text/javascript">
+        (function(){
+            const main = document.getElementById('maincontent');
+            let headerElement = document.getElementsByTagName('header');
+
+            function offsetHeadingHeight(headerElement){
+                const height = headerElement[0].offsetHeight;
+                main.style.marginTop = `${height - 70}px`;
+            }
+
+            if(window.innerWidth <= 760){
+                offsetHeadingHeight(headerElement);
+            }
+
+            window.addEventListener('resize', function(e) {
+                if(window.innerWidth <= 760){
+                    headerElement = document.getElementsByTagName('header');
+                    offsetHeadingHeight(headerElement);
+                }else{
+                    main.style.marginTop = `0px`;
+                }
+            });
+        })();
+    </script>
     <!-- Google Maps -->
     <!--  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script> -->
     <!-- End scripts -->
