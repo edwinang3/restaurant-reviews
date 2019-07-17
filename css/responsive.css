@@ -2,7 +2,7 @@
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: minmax(70px, auto) auto minmax(70px, auto);
+  grid-template-rows: minmax(76px, auto) auto minmax(70px, auto);
   grid-template-areas: "header" "main" "footer"; }
 
 header {
