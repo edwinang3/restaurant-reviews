@@ -31,3 +31,13 @@ footer {
     justify-content: center;
     padding: 10px 0;
 }
+
+@media screen and (max-width: 610px){
+    .filter-options{
+        flex-direction: column;
+        
+        h2 {
+            margin-top: 10px;
+        }
+    }
+}
