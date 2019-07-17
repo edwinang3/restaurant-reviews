@@ -110,7 +110,10 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 50%;
+    box-sizing: border-box;
+    height: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Display list items side by side */
