@@ -44,16 +44,34 @@ footer {
       max-width: none;
       width: 100%; } }
 /* Grid layout for restaurant details page */
-.inside #maincontent {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-template-areas: "restaurant map" "review map"; }
-.inside #map-container {
-  grid-area: map; }
-.inside #restaurant-container {
-  grid-area: restaurant; }
-.inside #reviews-container {
-  grid-area: review; }
+.inside {
+  grid-template-columns: minmax(auto, 380px) auto;
+  grid-template-areas: "header header" "main ." "footer ."; }
+  .inside #maincontent {
+    display: grid;
+    grid-template-columns: minmax(auto, 380px) auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "restaurant map" "review map"; }
+  .inside #map-container {
+    grid-area: map; }
+  .inside #restaurant-container {
+    grid-area: restaurant; }
+  .inside #reviews-container {
+    grid-area: review; }
+
+@media screen and (max-width: 760px) {
+  .inside {
+    grid-template-columns: auto;
+    grid-template-areas: "header" "main" "footer"; }
+    .inside #maincontent {
+      grid-template-areas: "map map" "restaurant restaurant" "review review"; }
+    .inside #breadcrumb {
+      width: 100%; }
+    .inside #map-container {
+      position: static;
+      width: 100%;
+      height: 250px; }
+    .inside #restaurant-container {
+      margin-top: 0; } }
 
 /*# sourceMappingURL=responsive.css.map */

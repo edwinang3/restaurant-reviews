@@ -69,9 +69,15 @@ footer {
 
 /* Grid layout for restaurant details page */
 .inside {
+    grid-template-columns: minmax(auto, 380px) auto;
+    grid-template-areas: 
+        "header header"
+        "main ."
+        "footer .";
+    
     #maincontent {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: minmax(auto, 380px) auto;
         grid-template-rows: repeat(2, auto);
         grid-template-areas: 
             "restaurant map"
@@ -88,5 +94,36 @@ footer {
 
     #reviews-container {
         grid-area: review;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .inside {
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        
+        #maincontent {
+            grid-template-areas: 
+                "map map"
+                "restaurant restaurant"
+                "review review";
+        }
+        
+        #breadcrumb {
+            width: 100%;
+        }
+        
+        #map-container {
+            position: static;
+            width: 100%;
+            height: 250px;
+        }
+        
+        #restaurant-container {
+            margin-top: 0;
+        }
     }
 }
