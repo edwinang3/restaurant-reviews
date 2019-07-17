@@ -1,3 +1,4 @@
+/* Grid layout for header, main and footer */
 body {
   display: grid;
   grid-template-columns: 1fr;
