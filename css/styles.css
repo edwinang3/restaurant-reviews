@@ -314,6 +314,11 @@ nav h1 a {
 #restaurant-hours {
     padding: 0 12px;
     margin: 0 0 10px 0;
+    width: 100%;
+}
+
+#restaurant-hours td {
+    width: 50%;
 }
 
 #restaurant-cuisine {
