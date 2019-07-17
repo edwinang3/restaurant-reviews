@@ -43,5 +43,17 @@ footer {
     #restaurants-list li {
       max-width: none;
       width: 100%; } }
+/* Grid layout for restaurant details page */
+.inside #maincontent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "restaurant map" "review map"; }
+.inside #map-container {
+  grid-area: map; }
+.inside #restaurant-container {
+  grid-area: restaurant; }
+.inside #reviews-container {
+  grid-area: review; }
 
 /*# sourceMappingURL=responsive.css.map */

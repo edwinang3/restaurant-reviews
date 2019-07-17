@@ -66,3 +66,27 @@ footer {
         }
     }
 }
+
+/* Grid layout for restaurant details page */
+.inside {
+    #maincontent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+            "restaurant map"
+            "review map";
+    }
+
+    #map-container {
+        grid-area: map;
+    }
+
+    #restaurant-container {
+        grid-area: restaurant;
+    }
+
+    #reviews-container {
+        grid-area: review;
+    }
+}
