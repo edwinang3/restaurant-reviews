@@ -33,4 +33,11 @@ footer {
   grid-gap: 20px;
   box-sizing: border-box; }
 
+@media screen and (max-width: 610px) {
+  #restaurants-list {
+    grid-template-columns: repeat(auto-fit, 1fr); }
+    #restaurants-list li {
+      max-width: none;
+      width: 100%; } }
+
 /*# sourceMappingURL=responsive.css.map */
