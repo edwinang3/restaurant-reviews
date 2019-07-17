@@ -313,6 +313,10 @@ nav h1 a {
     width: 100%;
 }
 
+#restaurant-hours td {
+    color: #666;
+}
+
 #restaurant-cuisine {
     background-color: #f18200;
     color: #ffffff;
@@ -352,20 +356,50 @@ nav h1 a {
 
 #reviews-list li {
     background-color: #fff;
-    border: 2px solid #f3f3f3;
     display: block;
     list-style-type: none;
     margin: 0 0 30px;
     overflow: hidden;
-    padding: 0 20px 20px;
+    padding: 0;
     position: relative;
-    width: 85%;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-#reviews-list li p {
-    margin: 0 0 10px;
+#reviews-list li > p:not(.review-card-rating){
+    padding: 0 20px;
 }
 
-#restaurant-hours td {
-    color: #666;
+.review-card-rating {
+    background-color: #f18200;
+    color: #ffffff;
+    margin: 15px 0 0 20px;
+    padding: 5px 10px;
+    align-self: flex-start;
+    display: inline-block;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.review-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #333;
+}
+
+.review-card-heading p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.review-card-heading p:first-child {
+    font-size: 13.5pt;
+}
+
+.review-card-heading p:last-child{
+    color: #e3e3e3;
 }
