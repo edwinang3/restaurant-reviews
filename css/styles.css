@@ -311,12 +311,14 @@ nav h1 a {
 #reviews-container {
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
-    padding: 140px 40px 30px;
-    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    align-self: start;
 }
 
-#reviews-container {
-    padding: 30px 40px 80px;
+#restaurant-container {
+    margin-top: 50px;
 }
 
 #reviews-container h2 {
