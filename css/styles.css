@@ -139,21 +139,34 @@ nav h1 a {
 }
 #restaurants-list li {
   background-color: #fff;
-  border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
-  min-height: 380px;
-  padding: 0 30px 25px;
+  min-height: 340px;
+  max-width: 350px;
   text-align: left;
-  width: 270px;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+#restaurants-list .restaurant-details {
+  padding: 20px;
+  box-sizing: border-box;
+}
+#restaurants-list .restaurant-details *:not(a){
+  margin: 0 0 10px 0;
+}
+#restaurants-list .restaurant-details a{
+  margin: 15px 0 0 0;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  height: 200px;
   min-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 #restaurants-list li h1 {
   color: #f18200;
