@@ -34,6 +34,8 @@ footer {
   box-sizing: border-box;
   max-width: 1140px;
   margin: auto; }
+  #restaurants-list li {
+    place-self: center; }
 
 @media screen and (max-width: 610px) {
   #restaurants-list {
