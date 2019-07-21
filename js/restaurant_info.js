@@ -86,7 +86,11 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     const address = document.getElementById('restaurant-address');
     
     const image = document.getElementById('restaurant-img');
-    image.alt = `Picture of the restaurant ${restaurant.name}`;
+    if(restaurant.name == 'Emily'){
+        image.alt = `Picture of a pizza from the restaurant ${restaurant.name}`;
+    }else{
+        image.alt = `Picture of the restaurant ${restaurant.name}`;
+    }
     image.className = 'restaurant-img';
     image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
